@@ -28,11 +28,12 @@ public class Mario extends Sprite {
 
 	public void jump() {
 		if (!isInAir) {
-			yVel += 150;
+			yVel += 15;
 		}
 	}
 
 	public void act(ArrayList<Shape> obstacles) {
+		this.moveByAmount(0, -yVel);
 		this.isInAir = true;
 		Rectangle2D hitbox = new Rectangle2D.Double(x, y, MARIO_WIDTH, MARIO_HEIGHT);
 		for (Shape s : obstacles) {
@@ -45,7 +46,7 @@ public class Mario extends Sprite {
 		} else {
 			yVel--;
 		}
-		this.moveByAmount(0, -yVel);
+
 	}
 
 }
