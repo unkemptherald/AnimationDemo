@@ -28,7 +28,7 @@ public class Mario extends Sprite {
 
 	public void jump() {
 		if (!isInAir) {
-			yVel += 15;
+			yVel += 20;
 		}
 	}
 
@@ -42,7 +42,7 @@ public class Mario extends Sprite {
 			}
 		}
 		if (!isInAir) {
-			yVel = 0;
+			yVel = 1;
 		} else {
 			yVel--;
 		}
